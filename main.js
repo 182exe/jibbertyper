@@ -193,7 +193,6 @@ var totalTime = Math.round(time);
 var css = time+"s animate linear";
 var javatime = time*1000;
 
-// Timer
 let timer = null;
 
 const charEls = [];
@@ -216,18 +215,16 @@ function resetCharEls() {
 };
 
 input.addEventListener("keyup", () => {
-    // if timer is null that means the game is not started yet
   if (!timer) {
     progressBar.classList.add("active");
     document.getElementById('progress-bar').style.animation = css;
     timer = setTimeout(() => {
       if (confirm("You ran out of time! You can close this notification to continue typing or press OK to retry.") === true) {
-      location.reload()
-    } else {
-      //nothing
-    }
-      window.alert();
-    }, javatime); // 10000ms = 10s, there is also a 10s animated duration in css also
+        location.reload()
+      } else {
+        //nothing
+      }
+    }, javatime);
   }
   const val = input.value;
   resetCharEls();
