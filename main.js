@@ -221,7 +221,12 @@ input.addEventListener("keyup", () => {
     progressBar.classList.add("active");
     document.getElementById('progress-bar').style.animation = css;
     timer = setTimeout(() => {
-      window.alert("You ran out of time! You can close this notification to continue typing or reload the page to try again.");
+      if (confirm("You ran out of time! You can close this notification to continue typing or press OK to retry.") === true) {
+      location.reload()
+    } else {
+      //nothing
+    }
+      window.alert();
     }, javatime); // 10000ms = 10s, there is also a 10s animated duration in css also
   }
   const val = input.value;
@@ -238,8 +243,16 @@ input.addEventListener("keyup", () => {
     };
   });
   if (val.length >= str.length || val.length === str.length) {
-    var resultText = "Well Done! You completed the test within the time limit of " + totalTime + " seconds with " + errorCount + " error(s)!"
-    alert(resultText);
+    if (errorCount === 1) {
+      var resultText = "Well Done! You completed the test within the time limit of " + totalTime + " seconds with " + errorCount + " error!\n\nPress OK to restart and reload the page."
+    } else {
+      var resultText = "Well Done! You completed the test within the time limit of " + totalTime + " seconds with " + errorCount + " errors!\n\nPress OK to restart and reload the page."
+    }
+    if (confirm(resultText) === true) {
+      location.reload()
+    } else {
+      //nothing
+    }
     clearTimeout(timer);
   }
 });
