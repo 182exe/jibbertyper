@@ -3,157 +3,148 @@ const consonents = 'bcdfghjklmnprstvw';
 const rares = 'qxzy';
 
 function generateString(length) {
-    let result = '';
-    const vowelsLength = vowels.length;
-    const consonentsLength = consonents.length;
-    const raresLength = rares.length;
-    for ( let i = 0; i < length; i++ ) {
-      let randInt = Math.floor(Math.random() * 19);
-      if (randInt === 0) {
-        result += rares.charAt(Math.floor(Math.random() * raresLength));
+  let result = '';
+  const vowelsLength = vowels.length;
+  const consonentsLength = consonents.length;
+  const raresLength = rares.length;
+  for ( let i = 0; i < length; i++ ) {
+    let randInt = Math.floor(Math.random() * 19);
+    if (randInt === 0) {
+      result += rares.charAt(Math.floor(Math.random() * raresLength));
+      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+      result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+      result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+    } else {
+      if (randInt === 1) {
+        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+        result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+        result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
       } else {
-        if (randInt === 1) {
-          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+        if (randInt === 2) {
           result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
           result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
           result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-          result += ' ';
+          result += rares.charAt(Math.floor(Math.random() * raresLength));
         } else {
-          if (randInt === 2) {
+          if (randInt === 3) {
+            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
             result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
             result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
             result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-            result += rares.charAt(Math.floor(Math.random() * raresLength));
+            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
           } else {
-            if (randInt === 3) {
-              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+            if (randInt === 4) {
               result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
               result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-              result += ' ';
+              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
             } else {
-              if (randInt === 4) {
+              if (randInt === 5) {
+                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                 result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                 result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                 result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
               } else {
-                if (randInt === 5) {
+                if (randInt === 6) {
                   result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                   result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                  result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                   result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                  result += ' ';
+                  result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                  result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                 } else {
-                  if (randInt === 6) {
+                  if (randInt === 7) {
                     result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                     result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                     result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                     result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                    result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                     result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                    result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                     result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                    result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                    result += ' ';
                   } else {
-                    if (randInt === 7) {
+                    if (randInt === 8) {
                       result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                       result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                       result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                      result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                      result += ' ';
                     } else {
-                      if (randInt === 8) {
+                      if (randInt === 9) {
                         result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                         result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                         result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                        result += ' ';
+                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                       } else {
-                        if (randInt === 9) {
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += ' ';
+                        if (randInt === 10) {
+                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                        result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                        result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                         } else {
-                          if (randInt === 10) {
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                          result += ' ';
+                          if (randInt === 11) {
+                            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                            result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                            result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                           } else {
-                            if (randInt === 11) {
-                              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                            if (randInt === 12) {
                               result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                               result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                              result += rares.charAt(Math.floor(Math.random() * raresLength));
+                              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                               result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                               result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                               result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                              result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                              result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                              result += ' ';
                             } else {
-                              if (randInt === 12) {
+                              if (randInt === 13) {
                                 result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                 result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
+                                result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                 result += rares.charAt(Math.floor(Math.random() * raresLength));
-                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                                result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                result += ' ';
                               } else {
-                                if (randInt === 13) {
+                                if (randInt === 14) {
                                   result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                                   result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                  result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                   result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                                  result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                  result += rares.charAt(Math.floor(Math.random() * raresLength));
-                                  result += ' ';
                                 } else {
-                                  if (randInt === 14) {
+                                  if (randInt === 15) {
                                     result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                     result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                                    result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                                    result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-                                    result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                    result += rares.charAt(Math.floor(Math.random() * raresLength));
                                   } else {
-                                    if (randInt === 15) {
+                                    if (randInt === 16) {
+                                      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
                                       result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                       result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-                                      result += rares.charAt(Math.floor(Math.random() * raresLength));
                                     } else {
-                                      if (randInt === 16) {
-                                        result = result.slice(0, -1);
-                                        result += '.'
-                                        result += ' ';
+                                      if (randInt === 17) {
+                                        result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                        result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                       } else {
-                                        if (randInt === 17) {
-                                          result = result.slice(0, -1);
-                                          result += '?'
-                                          result += ' ';
-                                        } else {
-                                          if (randInt === 18) {
-                                            result = result.slice(0, -1);
-                                            result += '!'
-                                            result += ' ';
-                                          }
+                                        if (randInt === 18) {
+                                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                          result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
+                                          result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
                                         }
                                       }
                                     }
@@ -172,12 +163,29 @@ function generateString(length) {
           }
         }
       }
-//      result += consonents.charAt(Math.floor(Math.random() * consonentsLength));
-//      result += vowels.charAt(Math.floor(Math.random() * vowelsLength));
-//      result += rares.charAt(Math.floor(Math.random() * raresLength));
-//      result += ' ';
     }
-    return result;
+  randInt2 = Math.floor(Math.random() * 7);
+  if (randInt2 === 0) {
+    let randInt3 = Math.floor(Math.random() * 2);
+    if (randInt3 === 0) {
+      result += '!';
+      result += ' ';
+    } else {
+      if (randInt3 === 1) {
+        result += '.';
+        result += ' ';
+      } else {
+        if (randInt3 === 2) {
+          result += '?';
+          result += ' ';
+        }
+      }
+    }
+  } else {
+    result += ' ';
+  }
+  }
+  return result;
 }
 
 const raw = (generateString(15));
