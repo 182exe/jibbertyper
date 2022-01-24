@@ -1,6 +1,6 @@
 body {
   background-color: #0b1012;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Cutive Mono', monospace;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 0%;
@@ -20,7 +20,7 @@ body {
   background-color: #0b1012;
   padding-top: 0.1%;
   padding-bottom: 0.1%;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Cutive Mono', monospace;
 }
 
 .text, .input {
@@ -34,7 +34,7 @@ body {
   background-color: #0b1012;
   padding-top: 2%;
   padding-bottom: 2%;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Cutive Mono', monospace;
 }
 
 .progress-bar {
