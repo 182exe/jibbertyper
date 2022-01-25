@@ -5,13 +5,23 @@
     <link rel="shortcut icon" type="image/jpg" href="https://182exe.github.io/matrix/outline_keyboard_black_24dp.png"/>
     <link rel="icon" type="image/jpg" href="https://182exe.github.io/matrix/outline_keyboard_black_24dp.png"/>
     <link rel="stylesheet" href="styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <title>Jibbertyper</title>
 </head>
 <body>
   <div class="title">
     <h1>Jibbertyper</h1>
     <h5>Random word generator made into a simple typing game.</h5>
+  </div>
+  <hr>
+  <div class="title">
+    <h3>Settings</h3>
+    <h5>Please enter inputs for custom challenges before you start. Higher time values mean shorter time to complete. Time always scales by length. Higher length values mean longer strings.</h5>
+    <input id="timeInput" class="settings" type="number" placeholder="Time (Default 3)">
+    <input id="lengthInput" class="settings" type="number" placeholder="Length (Default: 15)">
+    <button class="button" onclick="javascript:updateSettings()">Generate Level</button>
+    <br>
+    <br>
   </div>
   <hr>
   <div class="text"></div>
