@@ -167,9 +167,9 @@ function generateString(length) {
         }
       }
     }
-  randInt2 = Math.floor(Math.random() * 8);
+  randInt2 = Math.floor(Math.random() * 5);
   if (randInt2 === 0) {
-    let randInt3 = Math.floor(Math.random() * 2);
+    let randInt3 = Math.floor(Math.random() * 6);
     if (randInt3 === 0) {
       result += '!';
       result += ' ';
@@ -185,6 +185,16 @@ function generateString(length) {
           if (randInt3 === 3) {
             result += ',';
             result += ' ';
+          } else {
+            if (randInt3 === 4) {
+              result += ',';
+              result += ' ';
+            } else {
+              if (randInt3 === 5) {
+                result += '.';
+                result += ' ';
+              }
+            }
           }
         }
       }
