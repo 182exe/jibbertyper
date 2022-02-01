@@ -167,7 +167,7 @@ function generateString(length) {
         }
       }
     }
-  randInt2 = Math.floor(Math.random() * 7);
+  randInt2 = Math.floor(Math.random() * 8);
   if (randInt2 === 0) {
     let randInt3 = Math.floor(Math.random() * 2);
     if (randInt3 === 0) {
@@ -185,6 +185,8 @@ function generateString(length) {
           if (randInt3 === 3) {
             result += ',';
             result += ' ';
+          }
+        }
       }
     }
   } else {
