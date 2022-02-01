@@ -181,7 +181,10 @@ function generateString(length) {
         if (randInt3 === 2) {
           result += '?';
           result += ' ';
-        }
+        } else {
+          if (randInt3 === 3) {
+            result += ',';
+            result += ' ';
       }
     }
   } else {
