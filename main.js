@@ -146,7 +146,7 @@ function generateRandWords(length) {
 }
 
 function start(lengthsetting,timesetting) {
-  const raw = (generateString(lengthsetting));
+  const raw = (generateRandWords(lengthsetting));
   const raw2 = raw.trim();
   const raw3 = raw2 + '.'
   const str = raw3.charAt(0).toUpperCase() + raw3.slice(1);
